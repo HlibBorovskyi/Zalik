@@ -1,0 +1,14 @@
+def find_and_print_paragraphs():
+    word = input("Введіть слово ")
+    file_path = 'typo_text.txt' 
+
+    with open(file_path, 'r') as file:
+        paragraphs = file.read().split('\n\n')
+
+    i = 0
+    while i < len(paragraphs):
+        if word in paragraphs[i]:
+            print(paragraphs[i])
+        i += 1
+
+find_and_print_paragraphs()
